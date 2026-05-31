@@ -1,20 +1,17 @@
-# REPORTE_CALIDAD.md (PLANTILLA)
+# Reporte de Calidad de Datos — Estaciones Meteorológicas Misiones
 
-Completar con las métricas del análisis pedido en TP2.MD.
+Este reporte presenta el diagnóstico cuantitativo de las dimensiones de calidad analizadas sobre el dataset `datos/estaciones_meteo.csv`.
 
 | Dimensión | Métrica calculada | Valor | Observaciones |
-|---|---|---|---|
-| Completitud | Tasa de completitud mínima | | |
-| Unicidad | Tasa de unicidad (filas completas) | | |
-| Validez (temp.) | Tasa de validez en temperatura [-40, 60] | | |
-| Validez (hum.) | Tasa de validez en humedad [0, 100] | | |
-| Consistencia | Inconsistencia en estacion | | |
-| Actualidad | Rango de fechas del dataset | | |
+| :--- | :--- | :--- | :--- |
+| **Completitud** | Tasa de completitud mínima | 82.21% | La columna más afectada es `humedad`. |
+| **Unicidad** | Tasa de unicidad (filas completas) | 100.0% | Se detectaron un total de 0 filas duplicadas. |
+| **Validez (temp.)** | Tasa de validez en `temperatura` [-40, 60] | 98.93% | Existen 48 registros fuera del rango físico establecido. |
+| **Validez (hum.)** | Tasa de validez en `humedad` [0, 100] | 97.83% | Existen 90 registros con porcentajes de humedad inválidos. |
+| **Consistencia** | Inconsistencia en `estacion` | 19 vs 8 | Hay inconsistencias. Existen variantes por tipeo, espacios o mayúsculas. |
+| **Actualidad** | Rango de fechas del dataset | 01/01/1990 — 30/06/2025 | Monitorear si el rango cubre el período esperado o incluye años fuera de contexto. |
 
-## Preguntas del profiling
+---
+*Reporte generado automáticamente mediante el módulo `src/diagnostico.py`.*
 
-1. ¿Cuántas alertas genera el reporte?
-2. ¿Se detectan los valores centinela como outliers?
-3. ¿Qué patrón de nulos se observa?
-4. ¿Cuántos duplicados exactos reporta?
-5. ¿Qué par de variables numéricas tiene mayor correlación?
+

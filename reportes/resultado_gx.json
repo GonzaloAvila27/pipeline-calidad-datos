@@ -1,0 +1,511 @@
+{
+    "success": false,
+    "results": [
+        {
+            "success": false,
+            "expectation_config": {
+                "type": "expect_table_columns_to_match_set",
+                "kwargs": {
+                    "batch_id": "meteo_datasource-meteo_asset",
+                    "column_set": [
+                        "id",
+                        "fecha",
+                        "estacion",
+                        "temperatura",
+                        "humedad",
+                        "presion",
+                        "precipitacion"
+                    ]
+                },
+                "meta": {},
+                "severity": "critical"
+            },
+            "result": {
+                "observed_value": [
+                    "estacion",
+                    "fecha",
+                    "humedad",
+                    "id",
+                    "precipitacion",
+                    "presion",
+                    "temperatura",
+                    "viento_kmh"
+                ],
+                "details": {
+                    "mismatched": {
+                        "unexpected": [
+                            "viento_kmh"
+                        ]
+                    }
+                }
+            },
+            "meta": {},
+            "exception_info": {
+                "raised_exception": false,
+                "exception_traceback": null,
+                "exception_message": null
+            }
+        },
+        {
+            "success": false,
+            "expectation_config": {
+                "type": "expect_compound_columns_to_be_unique",
+                "kwargs": {
+                    "batch_id": "meteo_datasource-meteo_asset",
+                    "column_list": [
+                        "fecha",
+                        "estacion"
+                    ]
+                },
+                "meta": {},
+                "severity": "critical"
+            },
+            "result": {
+                "element_count": 5047,
+                "unexpected_count": 1513,
+                "unexpected_percent": 29.978204874182683,
+                "partial_unexpected_list": [
+                    {
+                        "fecha": "07/07/2024",
+                        "estacion": "posadas"
+                    },
+                    {
+                        "fecha": "17/02/2025",
+                        "estacion": "Oberá"
+                    },
+                    {
+                        "fecha": "22/02/2025",
+                        "estacion": "Posadas "
+                    },
+                    {
+                        "fecha": "18/06/2024",
+                        "estacion": "Oberá"
+                    },
+                    {
+                        "fecha": "15/01/2024",
+                        "estacion": "Iguazú"
+                    },
+                    {
+                        "fecha": "27/01/2024",
+                        "estacion": "Obera"
+                    },
+                    {
+                        "fecha": "14/07/2024",
+                        "estacion": "Apóstoles"
+                    },
+                    {
+                        "fecha": "09/05/2025",
+                        "estacion": "Iguazu"
+                    },
+                    {
+                        "fecha": "28/03/2024",
+                        "estacion": "iguazú"
+                    },
+                    {
+                        "fecha": "03/01/2024",
+                        "estacion": "Apóstoles"
+                    },
+                    {
+                        "fecha": "04/08/2024",
+                        "estacion": "IGUAZU"
+                    },
+                    {
+                        "fecha": "01/01/2024",
+                        "estacion": "Oberá"
+                    },
+                    {
+                        "fecha": "19/08/2024",
+                        "estacion": "Apostoles"
+                    },
+                    {
+                        "fecha": "25/03/2024",
+                        "estacion": "Apóstoles"
+                    },
+                    {
+                        "fecha": "14/12/2024",
+                        "estacion": "Iguazú"
+                    },
+                    {
+                        "fecha": "07/07/2024",
+                        "estacion": "Eldorado"
+                    },
+                    {
+                        "fecha": "04/10/2024",
+                        "estacion": "Posadas"
+                    },
+                    {
+                        "fecha": "2024-07-24",
+                        "estacion": "Apostoles"
+                    },
+                    {
+                        "fecha": "25/05/2025",
+                        "estacion": "IGUAZU"
+                    },
+                    {
+                        "fecha": "23/10/2024",
+                        "estacion": "ELDORADO"
+                    }
+                ],
+                "missing_count": 0,
+                "missing_percent": 0.0,
+                "unexpected_percent_total": 29.978204874182683,
+                "unexpected_percent_nonmissing": 29.978204874182683
+            },
+            "meta": {},
+            "exception_info": {
+                "raised_exception": false,
+                "exception_traceback": null,
+                "exception_message": null
+            }
+        },
+        {
+            "success": true,
+            "expectation_config": {
+                "type": "expect_column_values_to_not_be_null",
+                "kwargs": {
+                    "batch_id": "meteo_datasource-meteo_asset",
+                    "column": "fecha"
+                },
+                "meta": {},
+                "severity": "critical"
+            },
+            "result": {
+                "element_count": 5047,
+                "unexpected_count": 0,
+                "unexpected_percent": 0.0,
+                "partial_unexpected_list": []
+            },
+            "meta": {},
+            "exception_info": {
+                "raised_exception": false,
+                "exception_traceback": null,
+                "exception_message": null
+            }
+        },
+        {
+            "success": false,
+            "expectation_config": {
+                "type": "expect_column_values_to_match_regex",
+                "kwargs": {
+                    "batch_id": "meteo_datasource-meteo_asset",
+                    "column": "fecha",
+                    "regex": "^\\d{2}/\\d{2}/\\d{4}$"
+                },
+                "meta": {},
+                "severity": "critical"
+            },
+            "result": {
+                "element_count": 5047,
+                "unexpected_count": 749,
+                "unexpected_percent": 14.840499306518723,
+                "partial_unexpected_list": [
+                    "2024-09-11",
+                    "2025-05-25",
+                    "1990-01-19",
+                    "2025-05-08",
+                    "2024-06-10",
+                    "2024-11-01",
+                    "2024-04-05",
+                    "2024-07-24",
+                    "2024-05-05",
+                    "2024-12-06",
+                    "2024-06-12",
+                    "2024-03-12",
+                    "2024-10-27",
+                    "2024-07-07",
+                    "2024-09-20",
+                    "2024-02-15",
+                    "2024-08-22",
+                    "2024-03-13",
+                    "2024-01-18",
+                    "2024-09-24"
+                ],
+                "missing_count": 0,
+                "missing_percent": 0.0,
+                "unexpected_percent_total": 14.840499306518723,
+                "unexpected_percent_nonmissing": 14.840499306518723
+            },
+            "meta": {},
+            "exception_info": {
+                "raised_exception": false,
+                "exception_traceback": null,
+                "exception_message": null
+            }
+        },
+        {
+            "success": true,
+            "expectation_config": {
+                "type": "expect_column_values_to_not_be_null",
+                "kwargs": {
+                    "batch_id": "meteo_datasource-meteo_asset",
+                    "column": "estacion"
+                },
+                "meta": {},
+                "severity": "critical"
+            },
+            "result": {
+                "element_count": 5047,
+                "unexpected_count": 0,
+                "unexpected_percent": 0.0,
+                "partial_unexpected_list": []
+            },
+            "meta": {},
+            "exception_info": {
+                "raised_exception": false,
+                "exception_traceback": null,
+                "exception_message": null
+            }
+        },
+        {
+            "success": false,
+            "expectation_config": {
+                "type": "expect_column_values_to_be_in_set",
+                "kwargs": {
+                    "batch_id": "meteo_datasource-meteo_asset",
+                    "column": "estacion",
+                    "value_set": [
+                        "Posadas",
+                        "Oberá",
+                        "Apóstoles",
+                        "Eldorado",
+                        "Puerto Iguazú",
+                        "San Vicente",
+                        "San Javier",
+                        "Bernardo de Irigoyen"
+                    ]
+                },
+                "meta": {},
+                "severity": "critical"
+            },
+            "result": {
+                "element_count": 5047,
+                "unexpected_count": 3893,
+                "unexpected_percent": 77.13493164255993,
+                "partial_unexpected_list": [
+                    "Apostoles",
+                    "posadas",
+                    "IGUAZU",
+                    "Posadas ",
+                    "IGUAZU",
+                    "Posadas ",
+                    "Iguazú",
+                    "Obera",
+                    "Iguazu",
+                    "Iguazu",
+                    "Apostoles",
+                    "iguazú",
+                    "IGUAZU",
+                    "oberá",
+                    "eldorado",
+                    "IGUAZU",
+                    "oberá",
+                    "Iguazu",
+                    "OBERÁ",
+                    "IGUAZU"
+                ],
+                "missing_count": 0,
+                "missing_percent": 0.0,
+                "unexpected_percent_total": 77.13493164255993,
+                "unexpected_percent_nonmissing": 77.13493164255993
+            },
+            "meta": {},
+            "exception_info": {
+                "raised_exception": false,
+                "exception_traceback": null,
+                "exception_message": null
+            }
+        },
+        {
+            "success": false,
+            "expectation_config": {
+                "type": "expect_column_values_to_be_between",
+                "kwargs": {
+                    "batch_id": "meteo_datasource-meteo_asset",
+                    "column": "temperatura",
+                    "min_value": -40.0,
+                    "max_value": 60.0
+                },
+                "meta": {},
+                "severity": "critical"
+            },
+            "result": {
+                "element_count": 5047,
+                "unexpected_count": 48,
+                "unexpected_percent": 1.066903756390309,
+                "partial_unexpected_list": [
+                    -999.0,
+                    -999.0,
+                    -999.0,
+                    999.0,
+                    999.0,
+                    999.0,
+                    -999.0,
+                    999.0,
+                    -999.0,
+                    -999.0,
+                    999.0,
+                    -999.0,
+                    999.0,
+                    999.0,
+                    -999.0,
+                    -999.0,
+                    999.0,
+                    -999.0,
+                    -999.0,
+                    -999.0
+                ],
+                "missing_count": 548,
+                "missing_percent": 10.857935407172578,
+                "unexpected_percent_total": 0.9510600356647513,
+                "unexpected_percent_nonmissing": 1.066903756390309
+            },
+            "meta": {},
+            "exception_info": {
+                "raised_exception": false,
+                "exception_traceback": null,
+                "exception_message": null
+            }
+        },
+        {
+            "success": false,
+            "expectation_config": {
+                "type": "expect_column_values_to_be_between",
+                "kwargs": {
+                    "batch_id": "meteo_datasource-meteo_asset",
+                    "column": "humedad",
+                    "min_value": 0.0,
+                    "max_value": 100.0
+                },
+                "meta": {},
+                "severity": "critical"
+            },
+            "result": {
+                "element_count": 5047,
+                "unexpected_count": 90,
+                "unexpected_percent": 2.1691973969631237,
+                "partial_unexpected_list": [
+                    129.9,
+                    121.4,
+                    101.3,
+                    115.0,
+                    102.7,
+                    126.5,
+                    134.3,
+                    143.6,
+                    109.8,
+                    102.3,
+                    104.0,
+                    -10.6,
+                    124.1,
+                    -4.5,
+                    108.2,
+                    105.0,
+                    103.6,
+                    117.9,
+                    134.4,
+                    137.1
+                ],
+                "missing_count": 898,
+                "missing_percent": 17.792748167228055,
+                "unexpected_percent_total": 1.7832375668714089,
+                "unexpected_percent_nonmissing": 2.1691973969631237
+            },
+            "meta": {},
+            "exception_info": {
+                "raised_exception": false,
+                "exception_traceback": null,
+                "exception_message": null
+            }
+        },
+        {
+            "success": true,
+            "expectation_config": {
+                "type": "expect_column_values_to_be_between",
+                "kwargs": {
+                    "batch_id": "meteo_datasource-meteo_asset",
+                    "column": "presion",
+                    "min_value": 900.0,
+                    "max_value": 1100.0
+                },
+                "meta": {},
+                "severity": "critical"
+            },
+            "result": {
+                "element_count": 5047,
+                "unexpected_count": 0,
+                "unexpected_percent": 0.0,
+                "partial_unexpected_list": [],
+                "missing_count": 888,
+                "missing_percent": 17.594610659797898,
+                "unexpected_percent_total": 0.0,
+                "unexpected_percent_nonmissing": 0.0
+            },
+            "meta": {},
+            "exception_info": {
+                "raised_exception": false,
+                "exception_traceback": null,
+                "exception_message": null
+            }
+        },
+        {
+            "success": true,
+            "expectation_config": {
+                "type": "expect_column_values_to_be_in_type_list",
+                "kwargs": {
+                    "batch_id": "meteo_datasource-meteo_asset",
+                    "column": "id",
+                    "type_list": [
+                        "int",
+                        "int64",
+                        "integer"
+                    ]
+                },
+                "meta": {},
+                "severity": "critical"
+            },
+            "result": {
+                "observed_value": "int64"
+            },
+            "meta": {},
+            "exception_info": {
+                "raised_exception": false,
+                "exception_traceback": null,
+                "exception_message": null
+            }
+        }
+    ],
+    "suite_name": "suite_estaciones_misiones",
+    "suite_parameters": {},
+    "statistics": {
+        "evaluated_expectations": 10,
+        "successful_expectations": 4,
+        "unsuccessful_expectations": 6,
+        "success_percent": 40.0
+    },
+    "meta": {
+        "great_expectations_version": "1.17.2",
+        "expectation_suite_name": "suite_estaciones_misiones",
+        "run_id": {
+            "run_name": null,
+            "run_time": "2026-05-28T16:33:04.546776-03:00"
+        },
+        "batch_spec": {
+            "batch_data": "PandasDataFrame"
+        },
+        "batch_markers": {
+            "ge_load_time": "20260528T193304.402774Z",
+            "pandas_data_fingerprint": "01f751e974973c35dea922bee7ac1f46"
+        },
+        "active_batch_definition": {
+            "datasource_name": "meteo_datasource",
+            "data_connector_name": "fluent",
+            "data_asset_name": "meteo_asset",
+            "batch_identifiers": {
+                "dataframe": "<DATAFRAME>"
+            }
+        },
+        "validation_time": "20260528T193304.546776Z",
+        "checkpoint_name": null
+    },
+    "id": null
+}
